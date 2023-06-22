@@ -1,0 +1,74 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.partner_register_page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  .custom_form {
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .logo_visible {
+    margin-top: rem(24px);
+    margin-bottom: rem(24px);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    @media only screen and (max-width: 576px) {
+      margin-top: rem(30px);
+      margin-bottom: rem(14px);
+    }
+    .goback_icon {
+      position: absolute;
+      padding: 0;
+      left: rem(16px);
+      top: rem(-2px);
+      @media only screen and (min-width: 576px) {
+        display: none;
+      }
+    }
+    .view_logo {
+      @media only screen and (min-width: 576px) {
+        display: none;
+      }
+    }
+    .view_title {
+      @media only screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+  }
+
+  .verify_email {
+    padding: 0;
+  }
+  .auth_option {
+    display: flex;
+    flex-direction: column;
+    .divider {
+      border: rem(0.5px) solid $grey-300;
+      margin: rem(12px) 0;
+    }
+    .terms_container {
+      padding-left: rem(19px);
+      .term_wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+  .nowrap {
+    white-space: nowrap;
+  }
+  .inline_block {
+    display: inline-block;
+  }
+}

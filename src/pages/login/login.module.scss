@@ -1,0 +1,128 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.form_login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  @media only screen and (max-width: 576px) {
+    padding: 0 rem(16px);
+  }
+  .custom_form {
+    max-width: rem(343px);
+    width: 100%;
+  }
+  .logo_visible {
+    margin-top: rem(25px);
+    margin-bottom: rem(24px);
+    display: flex;
+    justify-content: center;
+    @media only screen and (max-width: 576px) {
+      margin-top: rem(48px);
+      margin-bottom: rem(58px);
+    }
+    .view_logo {
+      @media only screen and (min-width: 576px) {
+        display: none;
+      }
+    }
+    .view_title {
+      @media only screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+  }
+  .mt_8 {
+    margin-top: rem(8px);
+  }
+  .mt_16 {
+    margin-top: rem(16px);
+  }
+  .mt_32 {
+    margin-top: rem(32px);
+  }
+  .mt_12 {
+    margin-top: rem(12px);
+  }
+  .mt_40 {
+    margin-top: rem(40px);
+  }
+  .mb_24 {
+    margin-bottom: rem(24px);
+  }
+  .auth_option {
+    display: flex;
+    justify-content: space-between;
+
+    .forgot_option {
+      display: flex;
+      align-items: center;
+      a {
+        text-decoration: none;
+      }
+      hr {
+        margin: 0 rem(8px);
+      }
+    }
+  }
+  .divider_wrapper {
+    margin-top: rem(40px);
+    margin-bottom: rem(24px);
+    width: 100%;
+    max-width: rem(343px);
+  }
+  .sns_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: rem(343px);
+    flex: 1 0 auto;
+    button {
+      height: rem(52px);
+      cursor: pointer;
+      .sns_icon_wrapper {
+        position: absolute;
+        left: rem(27px);
+      }
+    }
+
+    .naver_button {
+      @include borderPrimary;
+      border-radius: rem(8px);
+      border-color: $grey-100;
+      display: flex;
+      position: relative;
+      background-color: $white-basic;
+      align-items: center;
+      justify-content: center;
+      p {
+        justify-self: center;
+      }
+      margin-bottom: rem(12px);
+    }
+    .kakao_button {
+      @include borderPrimary;
+      border-color: $kakao-yellow;
+      border-radius: rem(8px);
+      display: flex;
+      position: relative;
+      background-color: $kakao-yellow;
+      align-items: center;
+      justify-content: center;
+      p {
+        justify-self: center;
+      }
+      margin-bottom: rem(12px);
+    }
+  }
+  .register_wrapper {
+    display: flex;
+    gap: rem(4px);
+    margin-bottom: rem(26px);
+    @media only screen and (max-width: 576px) {
+      margin-bottom: rem(40px);
+    }
+  }
+}

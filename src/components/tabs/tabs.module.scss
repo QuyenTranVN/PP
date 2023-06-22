@@ -1,0 +1,18 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.tab-list {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(10px);
+  list-style: none;
+  .tab-item {
+    @include tabItem;
+    cursor: pointer;
+  }
+  .active-item {
+    @include activeTitle;
+    border-bottom: 1px solid $blue-900;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.button_standard {
+  @include titleButton;
+  background-color: $black-1F;
+  border: 0;
+  cursor: pointer;
+  &:disabled {
+    background-color: $grey-400;
+    cursor: not-allowed;
+  }
+}
+
+.button_outlined {
+  @include titleButton;
+  background-color: $white-basic;
+  color: $black-1F;
+  cursor: pointer;
+  @include rem(
+    (
+      border: 1px solid $black-1F
+    )
+  );
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

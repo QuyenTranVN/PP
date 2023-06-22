@@ -1,0 +1,96 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.wrapper-interior {
+  @include rem(
+    (
+      padding: 24px 120px 80px 120px
+    )
+  );
+  .group-filter {
+    & > * {
+      margin-right: rem(10px);
+    }
+    .filter-button {
+      background: $background;
+      @include filterTitle;
+      & > svg {
+        margin-right: 4px;
+      }
+      @include rem(
+        (
+          border-radius: 3px,
+          padding: 3px 6px,
+          border: 1px solid $grey-400
+        )
+      );
+    }
+  }
+  .list-interior-wrapper {
+    .title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .left-title {
+        @include listTitle;
+      }
+      .right-title {
+        @include filterTitle;
+        svg {
+          margin-right: rem(4px);
+        }
+      }
+      @include rem(
+        (
+          margin-bottom: 24px,
+          margin-top: 35px
+        )
+      );
+    }
+    .list-interior {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      @include rem(
+        (
+          gap: 35px 17px
+        )
+      );
+    }
+    .group-tags {
+      display: flex;
+      flex-wrap: wrap;
+      @include rem(
+        (
+          gap: 4px,
+          margin-top: 13px
+        )
+      );
+    }
+  }
+}
+
+@include customMaxBreakPoint(576) {
+  .wrapper-interior {
+    @include rem(
+      (
+        padding: 16px
+      )
+    );
+    padding-top: 0;
+    .list-interior-wrapper {
+      .title {
+        display: flex;
+        @include rem(
+          (
+            gap: 3px,
+            margin: 24px auto
+          )
+        );
+      }
+      .list-interior {
+        grid-template-columns: repeat(auto-fit, minmax(345px, 1fr));
+      }
+    }
+  }
+}

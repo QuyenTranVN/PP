@@ -1,0 +1,33 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.wrapper-slider {
+  position: relative;
+  .step-count {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    @include rem(
+      (
+        padding: 5px 11px,
+        right: 120px
+      )
+    );
+    .active-step {
+      @include activeStep;
+    }
+    .max-step {
+      @include activeStep;
+      color: $grey-400;
+    }
+  }
+}
+
+@include customMaxBreakPoint(576) {
+  .wrapper-slider {
+    .step-count {
+      right: 0;
+    }
+  }
+}

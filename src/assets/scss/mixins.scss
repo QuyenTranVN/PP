@@ -1,0 +1,325 @@
+@import './variables';
+@import 'sass-rem';
+
+// function add important on production
+@function is-important($important) {
+  @return #{if($important, '!important', '')};
+}
+
+// Breakpoints
+@mixin smMinBreakPoint {
+  @media (min-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdMinBreakPoint {
+  @media (min-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgMinBreakPoint {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlMinBreakPoint {
+  @media (min-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xxlMinBreakPoint {
+  @media (min-width: #{$screen-xxl}) {
+    @content;
+  }
+}
+
+@mixin customMinBreakPoint($size) {
+  @media (min-width: ($size+'px')) {
+    @content;
+  }
+}
+
+@mixin customMaxBreakPoint($size) {
+  @media (max-width: ($size + 'px')) {
+    @content;
+  }
+}
+
+@mixin title {
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 20px,
+      line-height: 29px
+    )
+  );
+  color: $color-title;
+}
+
+@mixin titleButton {
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 16px,
+      line-height: 19px
+    )
+  );
+  color: $white-basic;
+}
+
+@mixin labelBold4 {
+  font-weight: 400;
+  @include rem(
+    (
+      font-size: 20px,
+      line-height: 24px
+    )
+  );
+  color: $black-basic;
+}
+
+@mixin labelBold5 {
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 20px,
+      line-height: 24px
+    )
+  );
+  color: $black-basic;
+}
+
+@mixin labelBold7 {
+  font-weight: 700;
+  @include rem(
+    (
+      font-size: 20px,
+      line-height: 24px
+    )
+  );
+  color: $black-basic;
+}
+
+@mixin link {
+  font-weight: 400;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 20px
+    )
+  );
+  color: $grey63;
+}
+
+@mixin collapseItem {
+  font-weight: 400;
+  @include rem(
+    (
+      font-size: 13px,
+      line-height: 19px
+    )
+  );
+  color: $color-title;
+}
+
+@mixin modalTitle {
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 12px,
+      line-height: 18px
+    )
+  );
+  color: $black-basic;
+}
+
+@mixin titleTable {
+  font-weight: 700;
+  color: $grey-74;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 20px
+    )
+  );
+}
+
+@mixin flex-center-vertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-center-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin labelInput {
+  font-weight: 700;
+  color: $grey-74;
+  @include rem(
+    (
+      font-size: 16px,
+      line-height: 23px
+    )
+  );
+}
+
+@mixin tabItem {
+  color: $grey-2b;
+  font-weight: 700;
+  @include rem(
+    (
+      font-size: 16px,
+      line-height: 19px
+    )
+  );
+}
+
+@mixin activeTitle {
+  color: $redFF;
+  font-weight: 700;
+  @include rem(
+    (
+      font-size: 16px,
+      line-height: 19px
+    )
+  );
+}
+
+@mixin bigTitle {
+  color: $white-basic;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 24px,
+      line-height: 29px
+    )
+  );
+}
+
+@mixin smallTitle {
+  color: $white-basic;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 19px
+    )
+  );
+}
+
+@mixin titleBlack {
+  color: $black-basic;
+  font-weight: 500;
+  @include rem(
+    (
+      font-size: 16px,
+      line-height: 19px
+    )
+  );
+}
+
+@mixin footerGrey {
+  color: $grey-6b;
+  font-weight: 400;
+  font-family: 'Inter' !important;
+  @include rem(
+    (
+      font-size: 12px,
+      line-height: 15px
+    )
+  );
+}
+
+@mixin activeStep {
+  color: $white-basic;
+  font-weight: 600;
+  @include rem(
+    (
+      font-size: 12px,
+      line-height: 14px
+    )
+  );
+}
+
+@mixin mainTitle {
+  font-weight: 700;
+  color: $black-basic;
+  @include rem(
+    (
+      font-size: 24px,
+      line-height: 29px
+    )
+  );
+}
+
+@mixin viewMoreTitle {
+  font-weight: 500;
+  color: $grey-400;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 17px
+    )
+  );
+}
+
+@mixin cardHorizontalTitle {
+  font-weight: 700;
+  color: $black-basic;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 17px
+    )
+  );
+}
+
+@mixin borderPrimary {
+  border: rem(1.2px) solid $grey-300;
+  border-radius: rem(4px);
+}
+
+@mixin filterTitle {
+  font-weight: 400;
+  color: $grey-400;
+  @include rem(
+    (
+      font-size: 14px,
+      line-height: 17px
+    )
+  );
+}
+
+@mixin listTitle {
+  font-weight: 600;
+  color: $black-basic;
+  @include rem(
+    (
+      font-size: 20px,
+      line-height: 24px
+    )
+  );
+}
+
+@mixin tagItem {
+  font-weight: 400;
+  color: $black-1F;
+  @include rem(
+    (
+      font-size: 12px,
+      line-height: 14px
+    )
+  );
+}

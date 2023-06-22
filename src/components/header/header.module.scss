@@ -1,0 +1,157 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background: $background;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: rem(14px 24px) !important;
+  padding: rem(20px 40px) !important;
+  width: initial;
+
+  .logo {
+    width: rem(29px);
+    height: rem(28px);
+  }
+  img {
+    cursor: pointer;
+  }
+  @include rem(
+    (
+      // padding: 0 120px 0 120px,
+      height: 80px,
+      border-bottom: 1px solid $grey-300
+    )
+  );
+  .right-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .button-estimate {
+      background-color: $blue-900;
+      @include titleButton;
+      margin-right: rem(27px);
+    }
+    .button-free {
+      background-color: $white-basic;
+      @include titleButton;
+      margin-right: rem(10px);
+      color: $grey-70;
+      border: 1px solid $border-grey-f1;
+    }
+    .button-login {
+      background-color: $redFF;
+      @include titleButton;
+    }
+    button {
+      border: none;
+      &:nth-child(2) {
+        padding: 0;
+        min-width: unset;
+      }
+      // &:hover {
+      //   font-weight: 600;
+      // }
+    }
+  }
+}
+
+.nav {
+  .nav-list {
+    display: flex;
+    gap: rem(50px);
+    li {
+      padding: 0;
+      display: inline-block;
+      width: auto;
+      .link {
+        text-decoration: none;
+        @include tabItem;
+      }
+
+      .active-link {
+        @extend .link;
+        @include activeTitle;
+        @include rem(
+          (
+            border-bottom: 2px solid $redFF,
+            padding-bottom: 6px
+          )
+        );
+      }
+    }
+  }
+}
+
+@include customMaxBreakPoint(576) {
+  .header-wrapper {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background: $white-basic;
+    @include rem(
+      (
+        border-bottom: 1px solid $grey-300
+      )
+    );
+    .header {
+      padding-bottom: 0 !important;
+      border-bottom: none;
+      height: unset;
+      // @include rem(
+      //   (
+      //     padding: 16px
+      //   )
+      // );
+    }
+    .nav {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      white-space: nowrap;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding-left: rem(16px);
+      .nav-list {
+        li {
+          &:last-child {
+            padding-right: rem(17px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@include customMinBreakPoint(577) {
+  .header {
+    @include rem(
+      (
+        padding: 0 16px
+      )
+    );
+  }
+}
+
+@include customMinBreakPoint(992) {
+  .header {
+    @include rem(
+      (
+        padding: 0 120px
+      )
+    );
+  }
+}

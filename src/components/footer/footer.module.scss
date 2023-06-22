@@ -1,0 +1,68 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+footer {
+  width: 100%;
+  background: $background-footer;
+  text-align: center;
+  @include rem(
+    (
+      padding: 30px 0,
+      // border-top: 1px solid $grey-f6
+    )
+  );
+  .top-content {
+    span {
+      // @extend .title-grey;
+      // &:first-child {
+      //   margin-right: rem(16px);
+      // }
+      font-size: 700;
+      font-weight: 700;
+      font-size: rem(14px);
+      line-height: rem(14px);
+      color: $white-basic;
+    }
+  }
+  .mid-content {
+    margin: rem(16px) 0;
+    // p {
+    //   @extend .title-grey;
+    //   &:first-child,
+    //   &:nth-child(2) {
+    //     color: $black-basic;
+    //   }
+    // }
+    .text-img {
+      width: 190px;
+      height: 48px;
+    }
+  }
+  .bottom-content {
+    p {
+      // @extend .title-grey;
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(12px);
+      line-height: rem(18px);
+      color: $white-basic;
+    }
+  }
+}
+
+.title-grey {
+  @include footerGrey;
+  margin-bottom: rem(4px);
+}
+
+@include customMaxBreakPoint(576) {
+  footer {
+    @include rem(
+      (
+        padding-left: 16px,
+        padding-right: 32px
+      )
+    );
+  }
+}

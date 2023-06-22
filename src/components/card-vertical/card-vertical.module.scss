@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.card-vertical {
+  display: flex;
+  flex-direction: column;
+  p {
+    margin-top: rem(16px);
+    margin-left: rem(10px);
+    @include titleBlack;
+  }
+}

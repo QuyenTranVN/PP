@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url(../fonts/Pretendard-Regular.otf), url(../fonts/Pretendard-Bold.otf), url(../fonts/Pretendard-Black.otf),
+    url(../fonts/Pretendard-Light.otf), url(../fonts/Pretendard-Medium.otf), url(../fonts/Pretendard-Thin.otf),
+    url(../fonts/Pretendard-ExtraBold.otf), url(../fonts/Pretendard-ExtraLight.otf),
+    url(../fonts/Pretendard-SemiBold.otf);
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url(../fonts/Inter-Regular.ttf), url(../fonts/Inter-Bold.ttf), url(../fonts/Inter-Black.ttf),
+    url(../fonts/Inter-Light.ttf), url(../fonts/Inter-Medium.ttf), url(../fonts/Inter-Thin.ttf),
+    url(../fonts/Inter-ExtraLight.ttf), url(../fonts/Inter-SemiBold.ttf), url(../fonts/Inter-ExtraBold.ttf);
+}
+
+@import './variables.scss';
+@import './mixins.scss';
+@import 'sass-rem';
+
+body {
+  background: $background-fa;
+  // background: $background;
+  font-family: 'Pretendard';
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Pretendard';
+  // font-family: 'NanumGothic';
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+div[role='button'],
+button {
+  cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: rem(4px);
+  height: rem(4px);
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $grey-300;
+  border-radius: rem(8px);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $grey-400;
+  border-radius: rem(8px);
+}

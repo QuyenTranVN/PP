@@ -1,0 +1,22 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.tab_container {
+  width: 100%;
+  border-bottom: rem(1px) solid $grey-300;
+  display: flex;
+  .tabs {
+    display: flex;
+    width: 100%;
+    .MuiTabs-flexContainer {
+      display: flex;
+    }
+    .tab_item {
+      color: $black-basic;
+      flex: 1;
+    }
+    // & .css-1aquho2-MuiTabs-indicator {
+    //   background-color: $black-basic;
+    // }
+  }
+}

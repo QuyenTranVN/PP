@@ -1,0 +1,65 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+
+.color-gray200 {
+  color: $grey-200;
+}
+
+.color-gray300 {
+  color: $grey-300;
+}
+
+.color-gray400 {
+  color: $grey-400;
+}
+
+.color-error {
+  color: $error;
+}
+
+.color-black {
+  color: $black-basic;
+}
+
+.color-white {
+  color: $white-basic;
+}
+
+.color-blue {
+  color: $blue-900;
+}
+
+.bold-lg {
+  font-weight: 500;
+}
+.bold-sm {
+  font-weight: 200;
+}
+.bold-md {
+  font-weight: 400;
+}
+.bold-xl {
+  font-weight: 600;
+}
+.bold-2xl {
+  font-weight: 700;
+}
+
+.size-lg {
+  font-size: rem(16px);
+}
+.size-sm {
+  font-size: rem(12px);
+}
+.size-xs {
+  font-size: rem(8px);
+}
+.size-md {
+  font-size: rem(14px);
+}
+.size-xl {
+  font-size: rem(20px);
+}
+.size-2xl {
+  font-size: rem(24px);
+}

@@ -1,0 +1,13 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.checkbox_wraper {
+  display: flex;
+  align-items: center;
+  justify-self: flex-start;
+  cursor: pointer;
+  button {
+    padding: 0 rem(7px) 0 0;
+  }
+}

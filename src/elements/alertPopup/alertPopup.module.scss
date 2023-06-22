@@ -1,0 +1,42 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+.popup_container {
+  margin: 0;
+  width: 100%;
+  max-width: rem(375px);
+}
+.popup_paper {
+  width: 100%;
+  margin: auto rem(27.5px) !important;
+}
+.popup_root {
+  display: flex;
+  justify-content: center;
+}
+.popup_wrapper {
+  width: 100%;
+  height: rem(200px) !important;
+  padding: 0 !important;
+  .content_wrapper {
+    height: rem(152px) !important;
+    border-bottom: 1px solid $grey-200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .title {
+      margin-bottom: rem(8px);
+      text-align: center;
+    }
+    .description {
+      text-align: center;
+    }
+  }
+  .action_wrapper {
+    height: rem(48px);
+    display: flex;
+    button {
+      flex: 1;
+    }
+  }
+}

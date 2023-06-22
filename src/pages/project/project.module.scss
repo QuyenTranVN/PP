@@ -1,0 +1,17 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.project {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: rem(6px);
+  // reset list styles
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  @include smMinBreakPoint {
+    grid-template-columns: repeat(auto-fit, 400px);
+  }
+}

@@ -1,0 +1,35 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.group-item {
+  @include rem(
+    (
+      padding: 0 0 28px 24px
+    )
+  );
+  .title {
+    @include activeStep;
+    color: $black-1F;
+    margin-bottom: rem(16px);
+  }
+  .list-item {
+    display: flex;
+    gap: rem(20px);
+    .button-filter {
+      background: transparent;
+      @include rem(
+        (
+          padding: 4px,
+          border-radius: 16px
+        )
+      );
+      @include filterTitle;
+      border: 1px solid;
+    }
+    .button-filter-active {
+      @extend .button-filter;
+      color: $blue-900;
+    }
+  }
+}

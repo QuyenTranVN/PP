@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.loading_normal {
+  color: #308fe8 !important;
+}
+
+.loading_standard {
+  color: $border-grey !important;
+}

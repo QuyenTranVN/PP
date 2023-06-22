@@ -1,0 +1,66 @@
+@import '../../assets/scss/mixins.scss';
+@import '../../assets/scss/variables.scss';
+
+.register_steps_container {
+  width: 100%;
+  padding: rem(24px) 0;
+  background-color: $background-wh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: rem(24px);
+  .register_step {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: rem(4px);
+  }
+}
+
+.register_form_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  max-width: rem(375px);
+  padding: rem(32px) rem(16px) rem(20px) rem(16px);
+  .mb_16 {
+    margin-bottom: rem(16px);
+  }
+  .mt_8 {
+    margin-top: rem(8px);
+  }
+  .mt_16 {
+    margin-top: rem(16px);
+  }
+  .mt_32 {
+    margin-top: rem(32px);
+  }
+  .mb_4 {
+    margin-bottom: rem(4px);
+  }
+  .mt_20 {
+    margin-top: rem(20px);
+  }
+  .verify_email {
+    padding: 0;
+  }
+  .button_group {
+    display: flex;
+    gap: rem(7px);
+    width: 100%;
+    button {
+      flex: 1;
+    }
+    .type_button {
+      @include borderPrimary;
+      border-color: $grey-400;
+      background-color: $white-basic;
+      height: rem(56px);
+      cursor: pointer;
+    }
+    .selected {
+      border-color: $main-blue !important;
+    }
+  }
+}

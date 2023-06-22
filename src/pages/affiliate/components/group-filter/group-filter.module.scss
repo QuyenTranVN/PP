@@ -1,0 +1,40 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.group-filter-wrapper {
+  .title {
+    @include labelBold7;
+  }
+  .note {
+    @include labelBold4;
+    color: $grey-400;
+  }
+  .list-item {
+    @include rem(
+      (
+        margin-top: 16px
+      )
+    );
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px 7px;
+    .button-filter {
+      @include titleButton;
+      color: $grey-400;
+      background: $white-basic;
+      @include rem(
+        (
+          height: 56px,
+          width: 168px,
+          border: 1px solid,
+          border-radius: 4px
+        )
+      );
+    }
+    .button-filter-active {
+      @extend .button-filter;
+      color: $blue-900;
+    }
+  }
+}

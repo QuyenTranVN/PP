@@ -1,0 +1,42 @@
+@import '../../assets/scss/variables.scss';
+@import '../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.outlined_black {
+  color: $black-basic !important;
+  background-color: $white-basic !important;
+  border-color: $black-basic !important;
+  border-radius: rem(4px) !important;
+}
+
+.outlined_gray400 {
+  color: $grey-400 !important;
+  background-color: $white-basic !important;
+  border-color: $grey-400 !important;
+  border-radius: rem(4px) !important;
+}
+
+.outlined_blue {
+  color: $main-blue !important;
+  background-color: $white-basic !important;
+  border-color: $main-blue !important;
+  border-radius: rem(4px) !important;
+}
+
+.filled_black {
+  background-color: $black-basic !important;
+  color: $white-basic !important;
+  border-radius: rem(4px) !important;
+}
+
+.filled_blue {
+  background-color: $main-blue !important;
+  color: $white-basic !important;
+  border-radius: rem(4px) !important;
+}
+
+.filled_gray400 {
+  background-color: $grey-400 !important;
+  color: $white-basic !important;
+  border-radius: rem(4px) !important;
+}

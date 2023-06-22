@@ -1,0 +1,39 @@
+@import '../../../../assets/scss/variables.scss';
+@import '../../../../assets/scss/mixins.scss';
+@import 'sass-rem';
+
+.header-modal {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: rem(32px);
+  .right-header,
+  .left-header {
+    display: flex;
+    align-items: center;
+  }
+
+  .left-header {
+    gap: rem(8px);
+    svg {
+      margin-right: rem(4px);
+    }
+    p {
+      @include labelBold7;
+    }
+    span {
+      @include viewMoreTitle;
+    }
+  }
+  .right-header {
+    gap: rem(20px);
+    div {
+      &:first-child {
+        @include viewMoreTitle;
+        color: $blue-900;
+      }
+    }
+  }
+  .close-title {
+    @include viewMoreTitle;
+  }
+}
