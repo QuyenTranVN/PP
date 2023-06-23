@@ -1,19 +1,21 @@
-import { Navigate, useRoutes } from 'react-router-dom'
+/** @format */
+
 import Layout from 'layouts'
-import RequireAuth from './requireAuth'
-import LoginPage from 'pages/login'
-import ProjectPage from 'pages/project'
-import Home from 'pages/home'
-import Portfolio from 'pages/portfolio'
-import InteriorPartner from 'pages/interior-partner'
 import Affiliate from 'pages/affiliate'
-import InteriorInformation from 'pages/interior-information'
-import SignupPage from 'pages/signup'
 import FindEmailPage from 'pages/findEmail'
 import FindPasswordPage from 'pages/findPassword'
-import PartnerRegisterPage from 'pages/partnerRegister'
-import PortfolioDetailPage from 'pages/portfolioDetail'
+import Home from 'pages/home'
+import InteriorInformation from 'pages/interior-information'
+import InteriorPartner from 'pages/interior-partner'
 import LandingPage from 'pages/landingPage'
+import LoginPage from 'pages/login'
+import PartnerRegisterPage from 'pages/partnerRegister'
+import Portfolio from 'pages/portfolio'
+import PortfolioDetailPage from 'pages/portfolioDetail'
+import ProjectPage from 'pages/project'
+import SignupPage from 'pages/signup'
+import { Navigate, useRoutes } from 'react-router-dom'
+import RequireAuth from './requireAuth'
 
 const Routes = () => {
   const routes = useRoutes([
@@ -25,64 +27,68 @@ const Routes = () => {
           children: [
             {
               path: '/issues',
-              element: <ProjectPage />
-            }
-          ]
+              element: <ProjectPage />,
+            },
+          ],
         },
         {
           path: '/',
-          element:  <Navigate to="/landing-page" replace  />
+          element: <Navigate to='/landing-page' replace />,
         },
         {
           path: '/*',
-          element:  <Navigate to="/landing-page" replace />
+          element: <Navigate to='/landing-page' replace />,
         },
         {
           path: '/landing-page',
-          element: <LandingPage />
+          element: <LandingPage />,
+        },
+        {
+          path: '/home',
+          element: <Home />,
         },
         {
           path: '/portfolio',
-          element: <Portfolio />
+          element: <Portfolio />,
         },
         {
           path: '/interior-partner',
-          element: <InteriorPartner />
+          element: <InteriorPartner />,
         },
         {
           path: '/affiliate',
-          element: <Affiliate />
+          element: <Affiliate />,
         },
         {
           path: '/interior-information',
-          element: <InteriorInformation />
+          element: <InteriorInformation />,
         },
         {
           path: '/partner-register',
-          element: <PartnerRegisterPage />
+          element: <PartnerRegisterPage />,
         },
         {
           path: '/portfolio/:id',
-          element: <PortfolioDetailPage />
-        }
-      ]
+          element: <PortfolioDetailPage />,
+        },
+      ],
     },
     {
       path: '/login',
-      element: <LoginPage />
+      element: <LoginPage />,
     },
     {
       path: '/signup',
-      element: <SignupPage />
+      element: <SignupPage />,
     },
     {
       path: '/find-email',
-      element: <FindEmailPage />
+      element: <FindEmailPage />,
     },
     {
       path: '/find-password',
-      element: <FindPasswordPage />
-    }
+      element: <FindPasswordPage />,
+    },
   ])
   return routes
 }
